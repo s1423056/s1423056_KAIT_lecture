@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "課題3_ダンジョン生成と脱出AI", "課題3_ダンジョン生成と脱出AI\課題3_ダンジョン生成と脱出AI.vcxproj", "{0F2CB8E5-4F28-4F47-9E39-E082955D72DC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "課題3_迷路探索AI", "迷路探索AI\迷路探索AI.vcxproj", "{384DE89C-FB8C-41E6-B0F7-41AFEEB9C491}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F2CB8E5-4F28-4F47-9E39-E082955D72DC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0F2CB8E5-4F28-4F47-9E39-E082955D72DC}.Debug|Win32.Build.0 = Debug|Win32
+		{0F2CB8E5-4F28-4F47-9E39-E082955D72DC}.Release|Win32.ActiveCfg = Release|Win32
+		{0F2CB8E5-4F28-4F47-9E39-E082955D72DC}.Release|Win32.Build.0 = Release|Win32
+		{384DE89C-FB8C-41E6-B0F7-41AFEEB9C491}.Debug|Win32.ActiveCfg = Debug|Win32
+		{384DE89C-FB8C-41E6-B0F7-41AFEEB9C491}.Debug|Win32.Build.0 = Debug|Win32
+		{384DE89C-FB8C-41E6-B0F7-41AFEEB9C491}.Release|Win32.ActiveCfg = Release|Win32
+		{384DE89C-FB8C-41E6-B0F7-41AFEEB9C491}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

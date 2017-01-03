@@ -1,0 +1,115 @@
+#include "colors.inc"
+#include "shapes.inc"
+#include "dodai.inc"
+#include "yane.inc"
+
+camera{
+  location <0,10,-150>
+  look_at <0,10,0>
+  angle 25
+}
+
+light_source{<0,10,0> color White parallel}
+light_source{<-30,0,0> color White parallel} 
+light_source{<30,10,0> color White parallel} 
+light_source{<0,0,-30> color White parallel} 
+light_source{<0,0,30> color White parallel} 
+
+object{
+  Plane_XZ
+  pigment{color Green}
+}
+
+object{
+  dodai
+}
+
+#declare kabe = 
+union{
+  object{
+    box{<-20,5,-10>,<20,20,20>}
+    texture{T_Wood3}
+  }
+  
+  object{//yane
+    box{<-20.5,18,-10.5>,<20.5,20.5,20.5>}
+    texture{T_Wood12}
+  }
+  
+  object{//hasira1
+    box{<-18,5,-8>,<-20.5,18,-10.5>}
+    texture{T_Wood12}
+  }
+  
+  object{//hasira2
+    box{<18,5,-8>,<20.5,18,-10.5>}
+    texture{T_Wood12}
+  }
+  
+  object{//hasira3
+    box{<-18,5,18>,<-20.5,18,20.5>}
+    texture{T_Wood12}
+  }
+  
+  object{//hasira4
+    box{<18,5,18>,<20.5,18,20.5>}
+    texture{T_Wood12}
+  }
+  
+  object{//sousyoku
+    box{<-20.5,14,-10.5>,<20.5,15,20.5>}
+    texture{T_Wood12}
+  }
+
+  #declare c = -1;
+  #while(c <= 1)
+    object{
+      box{<-0.5,15,-10.5>,<0.5,18,20.5>}
+      texture{T_Wood12}
+      translate<c*9,0,0>
+    }
+  #declare c = c+1;
+  #end
+  
+  #declare c = 1;
+  #while(c <= 2)
+  object{
+    box{<-20.5,15,c*26/3-8>,<20.5,18,c*26/3-7>}
+    texture{T_Wood12}
+    translate<0,0,0>
+  }
+  #declare c = c+1;
+  #end
+  
+  object{
+    box{<-9.5,5,-10.5>,<-8.5,14,-9>}
+    texture{T_Wood12}
+  }
+  
+  object{
+    box{<8.5,5,-10.5>,<9.5,14,-9>}
+    texture{T_Wood12}
+  }
+  
+}
+
+#declare jinja =
+union{
+  difference{
+    object{
+      kabe
+      scale x*-0.8
+    }
+    object{
+      box{<-7.5,5,-10>,<7.5,14,-9>}
+    }
+  }
+
+  object{
+    yane
+  }
+}
+
+object {jinja}
+
+

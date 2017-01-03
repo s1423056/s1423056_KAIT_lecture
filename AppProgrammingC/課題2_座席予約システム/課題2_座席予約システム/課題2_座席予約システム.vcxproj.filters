@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\SeatManager">
+      <UniqueIdentifier>{d78dfc46-f459-4af5-b7ee-cd91cd09587d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\FileManager">
+      <UniqueIdentifier>{d61c57fa-cfd0-4fcf-bbc0-ce12a4fc597b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Seat">
+      <UniqueIdentifier>{a594f2eb-1d8d-46b6-b0a5-d81aa6fe43c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ReserveSystem">
+      <UniqueIdentifier>{92a2c4ff-c4a9-4906-a05a-d87f8c0d286c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\UI">
+      <UniqueIdentifier>{61c75771-b5e5-4e4a-bbd4-d420005873bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\UI\UserInput">
+      <UniqueIdentifier>{af5bdc8a-3239-4829-a3f5-5b92a12bad28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\UI\Display">
+      <UniqueIdentifier>{40150f7d-7952-422f-83cb-369a437b7984}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SeatManager.cpp">
+      <Filter>ソース ファイル\SeatManager</Filter>
+    </ClCompile>
+    <ClCompile Include="FileManager.cpp">
+      <Filter>ソース ファイル\FileManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SeatReserveSystem.cpp">
+      <Filter>ソース ファイル\ReserveSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>ソース ファイル\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInput.cpp">
+      <Filter>ソース ファイル\UI\UserInput</Filter>
+    </ClCompile>
+    <ClCompile Include="Display.cpp">
+      <Filter>ソース ファイル\UI\Display</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SeatManagar.h">
+      <Filter>ソース ファイル\SeatManager</Filter>
+    </ClInclude>
+    <ClInclude Include="FileManager.h">
+      <Filter>ソース ファイル\FileManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Seat.h">
+      <Filter>ソース ファイル\Seat</Filter>
+    </ClInclude>
+    <ClInclude Include="SeatReserveSystem.h">
+      <Filter>ソース ファイル\ReserveSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>ソース ファイル\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInput.h">
+      <Filter>ソース ファイル\UI\UserInput</Filter>
+    </ClInclude>
+    <ClInclude Include="Display.h">
+      <Filter>ソース ファイル\UI\Display</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

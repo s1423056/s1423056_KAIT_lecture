@@ -1,0 +1,54 @@
+#include "shapes.inc"
+#include "textures.inc"
+
+camera{
+  location <25,15,-130>
+  look_at <0,10,0>
+  angle 40
+}
+
+light_source{z*20 color White parallel}
+light_source{y*2 color White parallel}
+
+sky_sphere{S_Cloud1}
+
+object{
+  Plane_XZ
+  pigment{color Feldspar}
+}
+
+#declare yane = 
+union{
+  object{
+    prism{
+      conic_sweep
+      linear_spline
+      18,
+      25,
+      4,
+      <-1,-1>,<-1,1>,<1,1>,<1,-1>
+    }
+    texture{DMFWood5}
+    scale y*-1
+    scale z*0.8
+    translate <0,45,5>
+    
+  }
+  object{
+    prism{
+      linear_sweep
+      -20,
+      20,
+      3
+      <1,0>,
+      <cos(pi),sin(pi)>,
+      <cos(pi/2),sin(pi/2)>
+      texture{DMFWood5}
+      scale <14,0.9,8>
+      rotate z*90
+      rotate x*-90
+      translate <0,27,5>
+    }
+  }
+}
+

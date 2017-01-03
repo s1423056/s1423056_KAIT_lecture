@@ -1,0 +1,55 @@
+#include "colors.inc"
+#include "shapes.inc"
+#include "textures.inc"
+#include "stones.inc"
+
+#declare kaidanyoko =
+object{
+  prism{
+    linear_sweep
+    0,
+    0.2,
+    4,
+    <0,0>,<-1,0>,<-1,-2>,<0,-1>
+  }
+  scale 5
+  rotate z*90
+  translate <0,5,0>
+  texture{T_Grnt1}
+}
+
+#declare miti = 
+union{
+  object{
+    box{<-10,0,-80>,<10,0.1,0>}
+    texture{T_Grnt1}
+  }
+  object{
+    box{<-9.9,5,-3>,<9.9,5,0>}
+    texture{T_Grnt1}
+  }
+  
+  object{
+   kaidanyoko
+   translate<10,0,0>
+  }
+  
+  object{
+    kaidanyoko
+    translate<-9,0,0>
+  }
+  
+  #declare c=0;
+  #while(c<5)
+  object{
+    box{<-9.9,0,-8+c>,<9.9,1+c,-7+c>}
+    texture{T_Grnt1}
+  }
+  #declare c = c+1;
+  #end
+}
+
+
+
+
+

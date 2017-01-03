@@ -1,0 +1,2 @@
+#declare FRAME = 3;
+#include  concat("simpleMove",str(clock*(FRAME-1),0,0),".pov") 

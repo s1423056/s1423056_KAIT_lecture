@@ -1,0 +1,75 @@
+#declare tx_grass1_1 =
+texture {
+  pigment {
+    Black
+  }
+}
+
+#declare tx_grass1_2 =
+texture {
+  pigment {
+    ForestGreen
+  }
+}
+
+#declare XX=20.0;　// 草原の面積(X)
+#declare ZZ=20.0;　// 草原の面積(Z)
+#declare X1=0.05;　// 草の間隔(X)
+#declare Z1=0.1;　　// 草の間隔(Z)　見た目上 Xより隙間が開いても大丈夫
+
+#declare R1=seed(124);　// 乱数列
+
+/*
+　　POV-Rayのmesh2オブジェクトを生成する
+*/
+mesh2 {
+
+// 草の数
+#declare II=XX/X1;
+#declare JJ=ZZ/Z1;
+
+　// 頂点リスト
+　vertex_vectors {
+　　3*II*JJ,
+
+#for (I,0,II-1)
+#for (J,0,JJ-1)
+
+#if (I!=0|J!=0)
+　　,
+#end
+
+　// 草の生えている位置と高さを乱数で揺らす
+#declare X2=I*X1+(rand(R1)*2-1)*0.02;
+#declare Z2=J*Z1+(rand(R1)*2-1)*0.02;
+#declare Y2=0.5*(0.8+rand(R1)*0.2);
+　// 一本の草を細い三角形で表す
+　<X2-0.02,0,Z2>,<X2,Y2,Z2>,<X2+0.02,0,Z2>
+#end // J
+#end // I
+　}
+
+　// テクスチャリスト
+　texture_list {
+　　2,
+　　texture { tx_grass1_1 },
+　　texture { tx_grass1_2 }
+　}
+
+　// 面リスト
+　face_indices {
+　　II*JJ,
+
+#for (K,0,II*JJ-1)
+#if (K!=0)
+　　,
+#end
+
+　　// ↑で生成した三角形の頂点を面の数だけ並べてるだけ
+　　<K*3,K*3+1,K*3+2>,0,1,0
+#end // K
+　}
+
+　// カメラ正面に持ってくる
+　translate <-10,0,-2>
+}

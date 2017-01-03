@@ -1,0 +1,62 @@
+#include "colors.inc"
+#include "shapes.inc"
+#include "Woods.inc"
+#include "textures.inc"
+
+camera{
+  location <10,10,-70>
+  look_at <0,10,0>
+  angle 25
+}
+
+light_source{<0,10,0> color White parallel}
+light_source{<-30,0,0> color White parallel} 
+light_source{<30,10,0> color White parallel} 
+light_source{<0,0,-30> color White parallel} 
+light_source{<0,0,30> color White parallel}
+light_source{<0,12,0> color White*2} 
+
+//#declare tobira_l =
+difference{
+  object{
+    box{<-8.5,5,-10>,<0,14,-9>}
+    texture{T_Wood8}
+    scale x*0.8
+  } 
+  object{
+    box{<-5,8,-10>,<-4,9,-9>}
+    texture{T_Wood3}
+  }
+  cutaway_textures
+}
+  /*
+  #declare b = 0;
+  #while(b < 4)
+    #declare c = 0;
+    #while(c < 3)
+      object{
+        box{<-6,13,-10>,<-5,12,-9>}
+        translate<b*1.4,c*-1.4,0>
+      }
+    #declare c = c+1;
+    #end
+  #declare b = b+1;
+  #end
+
+
+#declare tobira =
+union{
+  object{
+    tobira_l
+  }
+  
+  object{
+    tobira_l
+    scale x*-1
+  }
+}*/
+
+//object{tobira_l}
+
+object{Plane_XZ pigment{color Green}}
+object{Plane_XY pigment{color Blue}} 

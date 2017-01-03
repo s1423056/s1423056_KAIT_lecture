@@ -1,0 +1,13 @@
+#include "colors.inc"
+#include "shapes.inc"
+
+camera{
+  location <40,20,-140>
+  look_at <0,0,0>
+  angle 50
+}
+
+light_source{z*20 color White parallel}
+light_source{y*2 color White parallel}
+
+quadric{<0,0.5,0>,<0,0,0>,<1,0,0>,0 clipped_by{Box} transform L_3}

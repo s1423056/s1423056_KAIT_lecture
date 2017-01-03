@@ -1,0 +1,56 @@
+#include "colors.inc"
+#include "shapes.inc"
+#include "skies.inc"
+
+#include "saisenbako.inc"
+#include "torii.inc"
+#include "miti.inc"
+#include "dodai.inc"
+#include "jinja.inc"
+#include "kusa.inc"
+
+camera{
+  location <40,20,-135>
+  look_at <0,15,0>
+  angle 40
+}
+
+light_source{y*2 color White parallel}
+
+sky_sphere{S_Cloud1}
+
+object{
+  box{<-200,-1,-300>,<200,0,300>}
+  pigment{color Feldspar}
+}
+
+object{
+  miti
+  scale x*0.75
+}
+
+object{
+  torii
+  translate <0,-2,-32>
+  scale <1.8,2,1.8>
+}
+
+object{
+  saisenbako
+  scale 1.5
+  translate<0,6,3>
+}
+
+object{
+  dodai
+  translate<0,0,25>
+}
+
+object{
+  jinja
+  translate z*20
+}
+
+kusa(-200,-150,-8,300)
+kusa(8,-150,200,300)
+kusa(-8,50,8,300)

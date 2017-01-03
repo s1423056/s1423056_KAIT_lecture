@@ -1,0 +1,37 @@
+#include "colors.inc"
+#include "shapes.inc"
+#include "saisenbako.inc"
+
+camera{
+  location <0,15,-50>
+  look_at <0,7,0>
+  angle 25
+}
+
+light_source{<2,5,-3> color White parallel}
+//light_source{<-5,15,-30> color White}
+
+object{
+  cylinder{<0,0,0>,<0,12,0>,0.5}
+  translate<6,0,0>
+  rotate z*10
+  pigment{color Red}
+}
+
+object{
+  cylinder{<0,0,0>,<0,12,0>,0.5}
+  translate<-6,0,0>
+  rotate z*-10
+  pigment{color Red}
+}
+
+object{
+  box{<-7.0,9.0,-0.15>,<7.0,10.0,0.15>}
+  translate<0,1.0,0>
+  pigment{color Red}
+}
+
+object{
+  box{<-8.0,12.5,-1.0>,<8.0,13.0,1.0>}
+  pigment{color Red}
+}

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\Array">
+      <UniqueIdentifier>{c505bb7e-04a5-4170-83d3-87ef8090326a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Timer">
+      <UniqueIdentifier>{cda630bb-85ab-47df-8b1f-2ce4c462be85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\SortTest">
+      <UniqueIdentifier>{b9cdf841-8556-4f3b-9be7-0cb5c301c413}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WinMain.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>ソース ファイル\Timer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Array.h">
+      <Filter>ソース ファイル\Array</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectSortArray.h">
+      <Filter>ソース ファイル\Array</Filter>
+    </ClInclude>
+    <ClInclude Include="QuickSortArray.h">
+      <Filter>ソース ファイル\Array</Filter>
+    </ClInclude>
+    <ClInclude Include="OriginalSortArray.h">
+      <Filter>ソース ファイル\Array</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>ソース ファイル\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="SortTest.h">
+      <Filter>ソース ファイル\SortTest</Filter>
+    </ClInclude>
+    <ClInclude Include="BubbleSortArray.h">
+      <Filter>ソース ファイル\Array</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>
